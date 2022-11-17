@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "mel";
+  src: url(font/Storm\ Gust.ttf);
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  background: linear-gradient(#3d3737, #685f60);
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+#header {
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  box-shadow: 0 0.5rem 1rem#000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+#header img {
+  z-index: 99;
+  width: 50px;
+  margin-bottom: 20px;
+}
+#header b {
+  font-size: 40px;
+  font-weight: 900;
+}
+#header video {
+  position: absolute;
+  width: 600px;
+  left: 40px;
+  height: 80px;
+}
+#header h1 {
+  font-family: "Mel";
+  position: absolute;
+  top: 2px;
+  left: 80px;
+  color: #ddd;
+  font-size: 40px;
+  letter-spacing: -2px;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+#header h1 span {
+  opacity: 0;
+  display: inline-block;
+  animation: animate 1s linear forwards;
+}
+#header h1 span:nth-child(1) {
+  animation-delay: 0.7s;
+}
+#header h1 span:nth-child(2) {
+  animation-delay: 0.8s;
+}
+#header h1 span:nth-child(3) {
+  animation-delay: 0.9s;
+}
+#header h1 span:nth-child(4) {
+  animation-delay: 1.2s;
+}
+#header h1 span:nth-child(5) {
+  animation-delay: 1.7s;
+}
+#header h1 span:nth-child(6) {
+  animation-delay: 1.8s;
+}
+#header h1 span:nth-child(7) {
+  animation-delay: 2s;
+}
+#header h1 span:nth-child(8) {
+  animation-delay: 2.5s;
+}
+#header h1 span:nth-child(9) {
+  animation-delay: 2.7s;
+}
+#header h1 span:nth-child(10) {
+  animation-delay: 2.9s;
+}
+#header h1 span:nth-child(11) {
+  animation-delay: 3s;
+}
+#header h1 span:nth-child(12) {
+  animation-delay: 3.6s;
+}
+#header h1 span:nth-child(13) {
+  animation-delay: 3.8s;
+}
+#header h1 span:nth-child(14) {
+  animation-delay: 4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0);
+  }
+}
+#navbar {
+  display: flex;
+}
+#navbar ul li {
+  font-size: 20px;
+  display: inline;
+  list-style: none;
+  padding: 0 20px;
+}
+
+#navbar ul li a {
+  position: relative;
+  top: 10px;
+  width: 200px;
+  left: 550px;
+  min-width: 100px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+#navbar ul li a:hover {
+  color: aqua;
+  transform: scale(1.5);
+}
+
+#navbar ul .cart {
+  position: absolute;
+  right: 60px;
+  /* top: 20px; */
+}
+#navbar ul .search {
+  position: absolute;
+  right: 180px;
+}
+#navbar ul li a.active {
+  color: aqua;
+}
+#navbar ul li a.active::after,
+#navbar ul li a:hover::after {
+  content: "";
+  height: 2px;
+  background-color: #ddd;
+  position: absolute;
+  bottom: -8px;
+  left: 10px;
+  transition: 0.5s;
+  animation: animate2 0.2s linear forwards;
+}
+@keyframes animate2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.content h1 {
+  position: relative;
+  top: 150px;
+  left: 100px;
+  color: #ddd;
+}
+#content img {
+  position: absolute;
+  top: 150px;
+  width: 800px;
+  right: 100px;
+  justify-content: center;
+  object-fit: cover;
+  box-shadow: 30px 40px 60px 0px rgba(0, 0, 0);
+}
+.slogan img {
+  min-width: 700px;
+  position: absolute;
+  object-fit: cover;
+  top: -110px;
+  left: 140px;
+  z-index: 999;
+}
+.slogan p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 30px;
+  left: 100px;
+  width: 800px;
+  position: absolute;
+  top: 300px;
+}
+.slogan button {
+  position: absolute;
+  top: 550px;
+  left: 400px;
+  font-size: 30px;
+  color: red;
+  font-weight: bolder;
+  border-radius: 90px;
+  border: 0.2px solid red;
+  padding: 10px 30px 10px 30px;
+  opacity: 0.8;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+}
+.slogan button::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  content: "";
+  background: red;
+  z-index: -1;
+  transition: 0.5s linear;
+}
+.slogan button:hover::before {
+  width: 100%;
+  left: 0;
+}
+.slogan button:hover {
+  color: #fff;
+}
+
+/* Reponsive */
+@media (max-width: 1024px) {
+  #header img {
+    width: 50px;
+    margin-bottom: 20px;
+  }
+  #header h1 {
+    font-size: 30px;
+  }
+  #header b {
+    font-size: 40px;
+  }
+  #navbar ul li a {
+    top: 20px;
+    right: 5px;
+  }
+}
+
+#product {
+  position: relative;
+  margin-top: 5000px;
+}
